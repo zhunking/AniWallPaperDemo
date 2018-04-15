@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private void initView() {
 
-        mBottomTabLayout = findViewById(R.id.bottom_tab_layout);
+//        mBottomTabLayout = findViewById(R.id.bottom_tab_layout);
 
 
         mBottomTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
