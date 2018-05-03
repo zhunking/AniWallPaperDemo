@@ -1,17 +1,23 @@
-package com.zn.android.aniwallpaperdemo;
+package com.zn.android.aniwallpaperdemo.ui.main;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.FrameLayout;
+
+import com.zn.android.aniwallpaperdemo.DataGenerator;
+import com.zn.android.aniwallpaperdemo.R;
+import com.zn.android.aniwallpaperdemo.base.BaseActivity;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends BaseActivity implements MainContract.View{
 
+
+//    @Inject
+//    MainPresenter mainPresenter;
 
     @BindView(R.id.bottom_tab_layout)
     TabLayout mBottomTabLayout;
@@ -22,6 +28,11 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        DaggerMainActivityComponent.create().inject(this);
+
+
+
         ButterKnife.bind(this);
         mFragments = DataGenerator.getFragments("TabLayout Tab");
 
@@ -89,4 +100,8 @@ public class MainActivity extends AppCompatActivity  {
     }
 
 
+    @Override
+    public void setPresenter(Object presenter) {
+
+    }
 }
