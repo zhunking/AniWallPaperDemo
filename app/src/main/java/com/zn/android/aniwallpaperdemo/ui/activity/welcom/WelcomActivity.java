@@ -59,7 +59,6 @@ public class WelcomActivity extends BaseActivity implements WelcomContract.View 
     private void openService() {
         Intent intent = new Intent(this,AniPaperService.class);
         startService(intent);
-
     }
 
     private void initView() {
