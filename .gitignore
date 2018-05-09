@@ -9,3 +9,9 @@
 /build
 /captures
 .externalNativeBuild
+/app/build/
+/AniWallPaperDemo.iml
+/.idea/
+/app/app.iml
+/app/src/androidTest/
+
