@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.zn.android.aniwallpaperdemo.ui.fragment.HomeFragment;
+import com.zn.android.aniwallpaperdemo.ui.fragment.home.HomeFragment;
 import com.zn.android.aniwallpaperdemo.ui.fragment.ImageFragment;
 import com.zn.android.aniwallpaperdemo.ui.fragment.ProfileFragment;
 import com.zn.android.aniwallpaperdemo.ui.fragment.VideoFragment;

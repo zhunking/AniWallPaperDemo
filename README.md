@@ -14,7 +14,7 @@
 * ButterKnife  
 * Glide  
 
-* 项目展示了MVP+Dagger2+RxJava的实际应用
+* 项目展示了MVP+Dagger2+RxJava的应用
 * Lambda表达式
 * Gradle依赖库的版本的管理
 * Application的创建
