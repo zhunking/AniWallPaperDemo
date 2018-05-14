@@ -6,7 +6,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class WelcomModle  {
+public class WelcomModle {
 
     private WelcomContract.View view;
 
@@ -16,7 +16,7 @@ public class WelcomModle  {
 
     @Provides
     @ActivityScope
-    WelcomContract.View provideSelectCityContractView() {
+    WelcomContract.View provideWelcomContractView() {
         return view;
     }
 }

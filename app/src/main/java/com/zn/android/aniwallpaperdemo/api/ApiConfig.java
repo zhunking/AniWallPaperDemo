@@ -5,6 +5,6 @@ package com.zn.android.aniwallpaperdemo.api;
  */
 public class ApiConfig {
 
-    public  static String BASE_URL = "";
+    public  static String BASE_IMAGE_URL = "http://gank.io/api/data/福利/10";
 
 }

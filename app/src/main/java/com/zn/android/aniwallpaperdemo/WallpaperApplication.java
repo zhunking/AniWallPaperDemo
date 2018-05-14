@@ -36,9 +36,10 @@ public class WallpaperApplication extends Application {
 
         WallpaperApplicationInstance = this;
 
-        applicationComponent = DaggerApplicationComponent.builder()
+        applicationComponent= DaggerApplicationComponent.builder()
                 .applicationModle(new ApplicationModle(this))
                 .build();
+
     }
 
     public ApplicationComponent getApplicationComponent(){

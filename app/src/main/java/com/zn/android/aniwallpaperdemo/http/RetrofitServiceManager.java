@@ -38,7 +38,7 @@ public class RetrofitServiceManager {
                 .client(builder.build())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(ApiConfig.BASE_URL)
+                .baseUrl(ApiConfig.BASE_IMAGE_URL)
                 .build();
     }
 
