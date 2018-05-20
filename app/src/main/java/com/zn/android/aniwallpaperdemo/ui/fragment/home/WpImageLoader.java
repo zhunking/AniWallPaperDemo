@@ -40,7 +40,7 @@ public class WpImageLoader extends ObjectLoader {
         return observe(mImageService.getImage(IMAGE_URL)).map(new Function<ImageEntity, List<ImageEntity.ResultsBean>>() {
             @Override
             public List<ImageEntity.ResultsBean> apply(ImageEntity imageEntity) throws Exception {
-                Log.d(TAG, "apply: ");
+                Log.d(TAG, "apply: imageEntity =="+imageEntity.getResults().toString());
                 return imageEntity.getResults();
 
             }

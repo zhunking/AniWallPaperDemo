@@ -84,7 +84,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
         }
-        getImgeList();
+
+        getImage();
 
     }
 
@@ -100,7 +101,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
     }
 
     private void initView() {
-        mRecycleView.setAdapter(new HomeAdapter());
+        mRecycleView.setAdapter(new HomeAdapter(this.getContext()));
         mLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         mRecycleView.setLayoutManager(mLayoutManager);
 
@@ -127,29 +128,14 @@ public class HomeFragment extends BaseFragment implements HomeFragmentContract.V
         unbinder.unbind();
     }
 
-    public void getImgeList() {
-//        Observable observable =  wpImageLoader.getGankList().subscribe();
 
-/*        Flowable subscription = wpImageLoader.getGankList().subscribe(
-                new Action1<List<ImageEntity.ResultsBean>>() {
-            @Override
-            public void call(List<ImageEntity> gankEntries) {
-                Log.i("FK","gank size:"+gankEntries.size());
-                mAdapter.setData(gankEntries);
-                mAdapter.notifyDataSetChanged();
-            }
-        }, new Action1<Throwable>() {
-            @Override
-            public void call(Throwable throwable) {
-                throwable.printStackTrace();
-            }
-        });
-
-        addSubscription(subscription;*/
-    }
-
+    //使用其他的presenter时设置
     @Override
     public void setPresenter(Object presenter) {
 
+    }
+
+    public void getImage() {
+        presenter.loadImage();
     }
 }

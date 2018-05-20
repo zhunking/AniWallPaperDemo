@@ -14,4 +14,6 @@ public class WelcomPresenter implements WelcomContract.Presenter {
         this.context = context;
         this.welcomView = view;
     }
+
+
 }

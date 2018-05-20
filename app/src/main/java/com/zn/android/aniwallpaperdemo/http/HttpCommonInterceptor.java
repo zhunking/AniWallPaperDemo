@@ -27,7 +27,7 @@ class HttpCommonInterceptor implements Interceptor {
 
         Request.Builder requestBuilder =  oldRequest.newBuilder();
         requestBuilder.method(oldRequest.method(), oldRequest.body());
-        //添加公共参数,添加到header中
+        //添加公共参数
         if(mHeaderParamsMap.size() > 0){
             for(Map.Entry<String,String> params:mHeaderParamsMap.entrySet()){
                 requestBuilder.header(params.getKey(),params.getValue());

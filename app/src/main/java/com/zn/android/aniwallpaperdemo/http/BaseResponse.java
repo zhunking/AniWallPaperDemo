@@ -3,7 +3,7 @@ package com.zn.android.aniwallpaperdemo.http;
 /**
  *
  *
- * Created by zn on
+ * Created by zn on 2018
  */
 
 public class BaseResponse<T> {

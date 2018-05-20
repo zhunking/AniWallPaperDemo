@@ -1,7 +1,6 @@
 package com.zn.android.aniwallpaperdemo.ui.fragment.home;
 
 import com.zn.android.aniwallpaperdemo.di.ActivityScope;
-import com.zn.android.aniwallpaperdemo.di.FragmentScope;
 
 import dagger.Module;
 import dagger.Provides;
@@ -13,6 +12,8 @@ import dagger.Provides;
 @Module
 public class HomeFragmentModle {
 
+    private static final String IMAGE_URL = "http://gank.io/api/data/福利/50/1";
+    private static final String TAG = "WpImageLoader";
 
 
     private HomeFragmentContract.View view;
@@ -27,6 +28,7 @@ public class HomeFragmentModle {
     HomeFragmentContract.View provideHomeFragmentContractView() {
         return view;
     }
+
 
 
 

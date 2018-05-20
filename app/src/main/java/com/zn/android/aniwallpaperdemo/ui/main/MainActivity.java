@@ -1,11 +1,14 @@
 package com.zn.android.aniwallpaperdemo.ui.main;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.view.Window;
 
 import com.zn.android.aniwallpaperdemo.DataGenerator;
 import com.zn.android.aniwallpaperdemo.R;
+import com.zn.android.aniwallpaperdemo.WallpaperApplication;
 import com.zn.android.aniwallpaperdemo.base.BaseActivity;
 
 import javax.inject.Inject;
@@ -16,8 +19,8 @@ import butterknife.ButterKnife;
 public class MainActivity extends BaseActivity implements MainContract.View{
 
 
-//    @Inject
-//    MainPresenter mainPresenter;
+    @Inject
+    MainPresenter mainPresenter;
 
     @BindView(R.id.bottom_tab_layout)
     TabLayout mBottomTabLayout;
@@ -27,17 +30,21 @@ public class MainActivity extends BaseActivity implements MainContract.View{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //去除标题栏
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-
-//        DaggerMainActivityComponent.create().inject(this);
-
-
+        DaggerMainActivityComponent.builder()
+                .applicationComponent(WallpaperApplication.getInstance().getApplicationComponent())
+                .mainModle(new MainModle(this))
+                .build();
 
         ButterKnife.bind(this);
         mFragments = DataGenerator.getFragments("TabLayout Tab");
 
         initView();
     }
+
+
 
     private void initView() {
 
@@ -100,8 +107,14 @@ public class MainActivity extends BaseActivity implements MainContract.View{
     }
 
 
+
     @Override
     public void setPresenter(Object presenter) {
 
+    }
+
+    @Override
+    public Context getMyContext() {
+        return this;
     }
 }

@@ -11,3 +11,5 @@
 .externalNativeBuild
 /app/app.iml
 /.idea/
+/.gradle/
+/gradle/

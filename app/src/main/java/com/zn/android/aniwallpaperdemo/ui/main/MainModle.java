@@ -1,6 +1,7 @@
 package com.zn.android.aniwallpaperdemo.ui.main;
 
 import com.zn.android.aniwallpaperdemo.di.ActivityScope;
+import com.zn.android.aniwallpaperdemo.ui.fragment.home.HomeAdapter;
 
 import dagger.Module;
 import dagger.Provides;
@@ -20,4 +21,10 @@ public class MainModle {
     MainContract.View provideSelectCityContractView() {
         return view;
     }
+
+//    @Provides
+//    @ActivityScope
+//    HomeAdapter providerAdapter(){
+//        return new HomeAdapter(view.getMyContext());
+//    }
 }
